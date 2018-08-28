@@ -1,0 +1,45 @@
+page {
+  height: 100%;
+	background-color: #efefef;
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width:100%;
+}
+
+.section {
+  border-bottom:10rpx;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  height: 35%;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  flex-flow: row;
+  position: relative;
+  margin-bottom:15px;
+}
+
+.body {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  flex-flow: row;
+  position: relative;
+}
+
+button {
+  border-radius: 0rpx;
+  background-color: #fff;
+  text-align: left;
+}

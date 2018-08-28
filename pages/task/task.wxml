@@ -1,0 +1,59 @@
+<view class="container">
+  <view class="section header">
+    <view class="header-tab">
+        <text class="{{showfilterindex==1?'active':''}}" bindtap="setFilterPanel" data-findex="1">全部</text>
+         <view class="span"></view>
+        <text  class="{{showfilterindex==2?'active':''}}" bindtap="setFilterPanel"data-findex="2">接单</text>
+        <view  class="span"></view>
+        <text class="{{showfilterindex==3?'active':''}}"  bindtap="setFilterPanel"  data-findex="3">到仓</text>
+        <view class="span"></view>
+        <text class="{{showfilterindex==4?'active':''}}" bindtap="setFilterPanel" data-findex="4">装车</text>
+    </view>
+  </view>
+  <view class="body">
+   <scroll-view scroll-y="true" style="height:100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="true">
+   
+      <view wx:if="{{showfilterindex==1}}">
+        <import src="template/all_task.wxml"></import>
+        <view id="template-wrap">
+          <block wx:for="{{alltask}}" wx:for-item="taskItem">
+              <view class="tpl-container">
+                  <template is="taskTpl" data="{{taskItem}}"></template>
+              </view>
+          </block>
+        </view>
+      </view>
+      <view wx:elif="{{showfilterindex==2}}">
+        <import src="template/receive.wxml"></import>
+        <view id="template-wrap">
+          <block wx:for="{{alltask}}" wx:for-item="taskItem">
+              <view class="tpl-container">
+                  <template is="receiveTaskTpl" data="{{taskItem}}"></template>
+              </view>
+          </block>
+        </view>
+      </view>
+      <view wx:elif="{{showfilterindex==3}}">
+        <import src="template/arrive.wxml"></import>
+        <view id="template-wrap">
+          <block wx:for="{{alltask}}" wx:for-item="taskItem">
+              <view class="tpl-container">
+                  <template is="taskTpl" data="{{taskItem}}"></template>
+              </view>
+          </block>
+        </view>
+      </view>
+
+      <view wx:elif="{{showfilterindex==4}}">
+        <import src="template/ship.wxml"></import>
+        <view id="template-wrap">
+          <block wx:for="{{alltask}}" wx:for-item="taskItem">
+              <view class="tpl-container">
+                  <template is="taskTpl" data="{{taskItem}}"></template>
+              </view>
+          </block>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

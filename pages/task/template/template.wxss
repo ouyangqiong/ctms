@@ -1,0 +1,63 @@
+.top {
+  width: 100%;
+  padding: 6px 0;
+  overflow: hidden;
+}
+
+.top::after {
+  position: relative;
+}
+
+.info {
+  width: 93%;
+  margin-top: 6rpx;
+  padding: 16rpx 0 12rpx;
+  line-height: 36rpx;
+  overflow: hidden;
+}
+
+.info-left {
+  float: left;
+  padding-left: 6rpx;
+}
+
+.info-right {
+  float: right;
+  padding-right: 20rpx;
+  text-align: right;
+}
+
+.span {
+  display: block;
+  font-size: 28rpx;
+  color: #333;
+}
+
+.box {
+  width: 100%;
+  border-bottom:solid 1rpx #dedede;
+}
+
+.box::after{
+ content: " aa";
+  float: left;
+  width: 92%;
+  margin-top: -4rpx;
+  height: 1rpx;
+  background: #000;
+  overflow: hidden;
+  opacity: 0.5;
+}
+.comment-btn {
+    display: flex;
+    width: 93%;
+    overflow: hidden;
+    padding: 0rpx 0 12rpx;
+    margin: 10rpx 0rpx;
+    line-height: 48rpx;
+    font-size: 28rpx;
+    font-weight: normal;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

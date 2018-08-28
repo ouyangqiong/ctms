@@ -1,0 +1,30 @@
+<template name="taskTpl">
+  <view class="box">
+    <navigator class="top" url="articleOrder">
+      <view class="title">
+        <text>T18072700005</text>
+        <text>到仓</text>
+      </view>
+    </navigator>
+  </view>
+  <view class="box">
+    <view class="info">
+      <text class="span">运单数：{{taskItem.sendCount}}</text>
+    </view>
+    <view class="info">
+      <view class="info-left">
+        <text class="span">收货站点数：1</text>
+      </view>
+      <view class="info-right">
+        <text class="span">送达点数：1</text>
+      </view>
+    </view>
+    <view class="info">
+      <text class="span">备注：1</text>
+    </view>
+  </view>
+  <view class="comment-btn">
+    <button size="mini"> 送货单 </button>
+    <button type="warn" size="mini"> 装车 </button>
+  </view>
+</template>

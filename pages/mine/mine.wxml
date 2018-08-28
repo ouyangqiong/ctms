@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="section header">
+    <view style="text-align:center;">
+      <image src="../../images/person.png" style="width:81px; height: 81px;" ></image>
+    </view>
+    <view style="text-align:center;">
+      <text>张三</text>
+    </view>
+    
+  </view>
+  <view class="body">
+    <button lang="zh_CN" >关于</button>
+    <button >退出登录</button>
+  </view>
+</view>

@@ -1,0 +1,41 @@
+<view class="container">
+  <view class="section header">
+    <view class="filter-tab">
+        <text class="{{showfilterindex==1?'active':''}}" bindtap="setFilterPanel" data-findex="1">全部</text>
+         <view class="span"></view>
+        <text class="{{showfilterindex==2?'active':''}}" bindtap="setFilterPanel" data-findex="2">签收</text>
+    </view>
+  </view>
+  <view class="body">
+   <scroll-view scroll-y="true" style="height:100%;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="true">
+      <view class="order_list">
+        <view class="box">
+          <navigator class="top" url="articleOrder">
+            <view class="title">
+              <text>F18071300001-5</text>
+              <text>签收</text>
+            </view>
+          </navigator>
+        </view>
+        <view>
+          <view class="info">
+              <text class="span">发货站点：仓库1</text>
+          </view>
+          <view class="info">
+              <text class="span">发货地址：上海市宝山区宝钱公路</text>
+          </view>
+          <view class="dashline" />
+          <view class="info">
+              <text class="span">收货站点：仓库1</text>
+          </view>
+          <view class="info">
+              <text class="span">收货地址：上海市宝山区宝钱公路</text>
+          </view>
+          <view class="info">
+              <text class="span">备注：1</text>
+          </view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>

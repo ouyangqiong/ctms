@@ -1,0 +1,283 @@
+@import "template/template.wxss";
+
+page {
+  height: 100%;
+	background-color: #efefef;
+}
+
+.container {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  width:100%;
+}
+
+.section {
+  border-bottom:10rpx;
+}
+
+.header {
+  top: 0;
+  left: 0;
+  height: 9%;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  flex-flow: row;
+  position: relative;
+  margin-bottom: 15rpx;
+}
+
+.header::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 1px;
+  background: #dedede;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header_line {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  width: 100%;
+  height: 1px;
+  background: #dedede;
+  content: '';
+  -webkit-transform: scaleY(0.5);
+  transform: scaleY(0.5);
+  -webkit-transform-origin: 0 0;
+  transform-origin: 0 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.header_left {
+  width: 50%;
+  float: left;
+}
+
+.header_right {
+  width: 50%;
+  float: right;
+}
+
+.tpl-container{
+  background-color: #ffffff;
+  margin-bottom:15rpx;
+  padding: 0rpx 20rpx;
+}
+
+.assortment {
+  float: left;
+  height: 50rpx;
+  margin: 20rpx 0 0 25rpx;
+  border: #dd292a solid 1px;
+  background: #dd292a;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.ltclass {
+  display: block;
+  float: left;
+  height: 24px;
+  padding: 5px;
+  line-height: 15px;
+  font-size: 14px;
+  background: #dd292a;
+  color: #fff;
+}
+
+.rtclass {
+  display: block;
+  float: left;
+  height: 24px;
+  padding: 5px;
+  background: #fff;
+  line-height: 15px;
+  font-size: 14px;
+  color: #dd292a;
+}
+
+.search {
+  height: 8%;
+  padding: 0;
+}
+
+.header-tab {
+  display: flex;
+  width: 100%;
+  line-height: 84rpx;
+  position: relative;
+  z-index: 2;
+  background: #fff;
+}
+
+
+.header-tab text {
+  flex: 1;
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.header-tab text.active {
+  border-bottom:2px solid black;
+}
+
+.header-tab:not(.sort-tab) text.active:after {
+  border-top: 0;
+  border-bottom: 12rpx solid #39f;
+}
+
+.header-tab.sort-tab text.active:after {
+  border-top: 12rpx solid #39f;
+}
+
+.header-panel {
+  display: flex;
+  background: #eee;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+  overflow: hidden;
+  font-size: 28rpx;
+}
+
+.header-panel-left, .header-panel-right{
+  flex: 1;
+  height: 100%;
+  line-height: 80rpx;
+  text-align: center;
+  max-height: 800rpx;
+  overflow-y: auto;
+}
+
+.header-panel-center {
+  flex: 1;
+  line-height: 80rpx;
+  text-align: center;
+  max-height: 360rpx;
+  overflow-y: auto;
+}
+
+.center-span {
+  display: inline-block;
+  width: 38%;
+  height: 70rpx;
+  margin: 5px 5%;
+  border: #dedede solid 1px;
+  line-height: 70rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #333;
+  border-radius: 10rpx;
+}
+
+.center-span.active {
+  border: #dd2a2a solid 1rpx;
+  color: #dd2a2a;
+  opacity: 0.8;
+}
+
+.header-panel-left .active {
+  background: #fff;
+}
+
+.header-panel-right .active {
+  color: #39f;
+}
+
+.header-panel-right {
+  background: #fff;
+}
+
+.header-panel-right:empty {
+  display: none;
+}
+
+.header-shadow {
+  position: absolute;
+  width: 100%;
+  top: 200rpx;
+  bottom: 0;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+}
+
+
+.icon {
+  width: 50rpx;
+  height: 50rpx;
+  display: block;
+  float: right;
+  padding-top: 25rpx;
+  padding-right: 35rpx;
+}
+
+.list {
+  height: 83%;
+}
+
+.loading {
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 2;
+  margin-bottom: 20rpx;
+}
+
+.comment {
+  display: inline-block;
+  max-width: 65%;
+  height: 40rpx;
+  margin-top: 13rpx;
+}
+
+.body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 90%;
+  padding: 0;
+  margin: 0;
+  background: none;
+  list-style: none;
+}
+
+.title {
+  width: 90%;
+  padding: 0rpx 0 12rpx;
+  margin: 0;
+  line-height: 48rpx;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: #333;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.icon {
+  width: 80rpx;
+  height: 80rpx;
+  float: right;
+  margin-right: 44rpx;
+}
+
+button{
+  border-radius: 0;
+}
+
+

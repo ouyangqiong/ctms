@@ -1,0 +1,28 @@
+<view class="container">
+  <view class="header">
+  </view>
+
+  <view class="page-body">
+    <view class="page-section page-section-spacing swiper">
+      <!- 轮播 -->
+      <swiper class="banner"
+        indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" circular="{{circular}}" vertical="{{vertical}}"
+        interval="{{interval}}" duration="{{duration}}" previous-margin="{{previousMargin}}px" next-margin="{{nextMargin}}px">
+        <block wx:for="{{banners}}" wx:key="id">
+          <swiper-item>
+             <image bindtap="tapBanner" data-id="{{index}}" src="{{item.img}}" />
+          </swiper-item>
+        </block>
+      </swiper>
+      <!- 轮播 -->
+      <view class="section icons">
+        <swiper-item>
+          <view class="icon" wx:for="{{icons}}" wx:key="id" data-id="{{item.id}}" bindtap="taskTap">
+            <image src="{{item.img}}"></image>
+            <text>{{item.name}}</text>
+          </view>
+        </swiper-item>
+      </view>
+    </view>
+  </view>
+</view>
